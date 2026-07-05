@@ -44,6 +44,7 @@ if [ ! -f "/home/ark/.config/.djparentx-update07042026" ]; then
 	if [ -f "/dev/shm/djparentx-update07042026.zip" ]; then
         sudo unzip -X -o /dev/shm/djparentx-update07042026.zip -d / | tee -a "$LOG_FILE"
 		chmod -R +x /opt/system
+		rm -f "/opt/system/System/RetroArch One-Click Backup.sh"
 	else
 	  printf "\nThe update couldn't complete because the package did not download correctly.\nPlease retry the update again." | tee -a "$LOG_FILE"
 	  sudo rm -fv /dev/shm/djparentx-update07042026.z* | tee -a "$LOG_FILE"
