@@ -45,6 +45,7 @@ if [ ! -f "/home/ark/.config/.dArkOSen-update07042026" ]; then
         sudo unzip -X -o /dev/shm/dArkOSen-update07042026.zip -d / | tee -a "$LOG_FILE"
 		chmod -R +x /opt/system
 		rm -f "/opt/system/System/RetroArch One-Click Backup.sh"
+		rm -f "Update-djparentx.sh"
 		touch "/home/ark/.config/.dArkOSen-update07042026"
 	else
 	  printf "\nThe update couldn't complete because the package did not download correctly.\nPlease retry the update again." | tee -a "$LOG_FILE"
