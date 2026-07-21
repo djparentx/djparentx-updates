@@ -73,6 +73,7 @@ if [ ! -f "/home/ark/.config/.dArkOSen-update07202026" ]; then
 		rm -f /opt/system/BT\ Manager*.sh
 		# backup old BMPs and JPGs folders
 		cp -rf /boot/BMPs /boot/BMPs.old
+		rm -rf /boot/BMPs
 		cp -rf /roms/launchimages/JPGs /roms/launchimages/JPGs.old
 		rm -rf /roms/launchimages/JPGs
 		rm -f /boot/low_battery2.bmp /boot/low_battery3.bmp /boot/low_battery4.bmp
